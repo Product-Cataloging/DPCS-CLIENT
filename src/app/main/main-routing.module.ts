@@ -7,10 +7,10 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     // canActivate: [AuthGuard],
-    // children: [
-    //   { path: '',
-    //     loadChildren: () => import('../product-management/product-management.module').then(m => m.ProductManagementModule) },
-    // ]
+       children: [
+      { path: '',
+         loadChildren: () => import('../product-management/product-management.module').then(m => m.ProductManagementModule) },
+      ]
   }
 ];
 

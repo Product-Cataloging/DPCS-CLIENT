@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from 'src/app/product-management/models/product.model';
+import { ProductQuery } from 'src/app/product-management/state/product.query';
+import { ProductService } from 'src/app/product-management/state/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
+  products$:Observable<Product[]> = this.query.selectAll(); 
+  constructor(private service:ProductService,
+              private query:ProductQuery) {
+        this.service.get().subscribe();
+  }
 
   ngOnInit(): void {
   }

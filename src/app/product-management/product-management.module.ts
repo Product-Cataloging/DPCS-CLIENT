@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductManagementRoutingModule } from './product-management-routing.module';
-import { ProductListComponent } from './container/product-list/product-list.component';
-import { ProductListViewComponent } from './ui/product-list-view/product-list-view.component';
+import { AppCommonModule } from '../app.common.module';
+import { ProductListComponent } from './components/container/product-list/product-list.component';
+import { ProductListViewComponent } from './components/ui/product-list-view/product-list-view.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ProductListViewComponent } from './ui/product-list-view/product-list-vi
   ],
   imports: [
     CommonModule,
-    ProductManagementRoutingModule
+    ProductManagementRoutingModule,
+    AppCommonModule
   ]
 })
 export class ProductManagementModule { }

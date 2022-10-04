@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-list-view',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListViewComponent implements OnInit {
 
+  @Input() cardTitle: string = '';
+  @Input() cardImage: string = '';
   constructor() { }
 
   ngOnInit(): void {
