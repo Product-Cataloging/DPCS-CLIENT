@@ -10,7 +10,9 @@ import { InputMaskModule } from 'primeng/inputmask';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { FileUploadModule } from 'primeng/fileupload';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
-
+import {InputTextModule} from 'primeng/inputtext';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 @NgModule({
     exports: [
         SidebarModule,
@@ -23,7 +25,10 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
         InputMaskModule,
         BreadcrumbModule,
         FileUploadModule,
-        ConfirmDialogModule
+        ConfirmDialogModule,
+        InputTextModule,
+        OverlayPanelModule,
+        AutoCompleteModule
     ]
 })
 export class NgPrimeModule { }
