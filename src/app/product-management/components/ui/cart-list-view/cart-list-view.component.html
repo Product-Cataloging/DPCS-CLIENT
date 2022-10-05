@@ -1,1 +1,17 @@
-<p>cart-list-view works!</p>
+<div class="container">
+    <button class="btn btn-primary mb-3" (click)="onSendRequestClick()">Send Request for A Quote</button>
+    <div class="list-group">
+
+        <div  class="list-group-item">
+          <div class="d-flex w-100 justify-content-between">
+            <p class="mb-1 h4">{{listTitle}}</p>
+            <button mat-icon-button (click) ="onCancelClick($event)">
+                <mat-icon>cancel</mat-icon>
+           </button>          
+         </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+          <small class="text-muted">And some muted small print.</small>
+        </div>
+      </div>
+</div>
+

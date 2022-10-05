@@ -3,13 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
-  styleUrls: ['./cart-list.component.scss']
+  styleUrls: ['./cart-list.component.scss'],
 })
 export class CartListComponent implements OnInit {
+  listTitle = 'Hello';
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onCancelClick() {
   }
-
+  onSendRequestClick() {
+  }
 }
