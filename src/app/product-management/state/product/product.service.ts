@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { ID } from '@datorama/akita';
 import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { Product } from '../models/product.model';
+import { Product } from '../../models/product.model';
 import { ProductStore } from './product.store';
 
 @Injectable({ providedIn: 'root' })

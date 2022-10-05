@@ -1,0 +1,6 @@
+<app-product-details-view
+  *ngFor="let product of products$ | async"
+  [boardTitle]="product.name"
+  [boardImage]="product.tag"
+  [boardDescription]="product.description"
+></app-product-details-view>
