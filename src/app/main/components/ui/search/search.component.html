@@ -1,6 +1,6 @@
 <span class="p-input-icon-left ">
     <p-autoComplete  [(ngModel)]="text" [suggestions]="results" (completeMethod)="search($event)" placeholder="Search Here..."></p-autoComplete>
-    <button mat-icon-button color="accent" (click)="op.toggle($event)" aria-label="Example icon button with a menu icon">
+    <button mat-icon-button  (click)="op.toggle($event)" aria-label="Example icon button with a menu icon">
         <mat-icon>filter_list</mat-icon>
     </button>
     
@@ -8,10 +8,13 @@
 
 <p-overlayPanel #op>
     <ng-template pTemplate>
-        <input type="text" style="margin: 0.25rem;" pInputText [(ngModel)]="supplierName" placeholder="Supplier Name">
-        <input type="text" style="margin: 0.25rem;" pInputText [(ngModel)]="categoryName" placeholder="Category Name">
-        <input type="text" style="margin: 0.25rem;" pInputText [(ngModel)]="productName" placeholder="Product Name">
-        <button mat-flat-button color="primary" >Search</button>
+        <div>
+            <input type="text" style="margin: 0.25rem;" pInputText [(ngModel)]="supplierName" placeholder="Supplier Name">
+            <input type="text" style="margin: 0.25rem;" pInputText [(ngModel)]="categoryName" placeholder="Category Name">
+            <input type="text" style="margin: 0.25rem;" pInputText [(ngModel)]="productName" placeholder="Product Name">
+            <button mat-flat-button color="primary" >Search</button>
+    
+        </div>
     </ng-template>
 </p-overlayPanel>
 

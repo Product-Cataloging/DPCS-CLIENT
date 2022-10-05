@@ -1,11 +1,16 @@
-.container{
-   display: flex;
-   align-items: flex-start;
-   justify-content: space-between; 
-}
 table {
-    width:45%;
+    width:50%;
 }
 action-btn{
     align-items: center;
+}
+.card{
+    border: 0px;
+}
+.card-title{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.card-body{
+    border-top: 1px solid #05184C;
 }

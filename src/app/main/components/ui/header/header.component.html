@@ -1,4 +1,4 @@
-<p>   
+<!-- <p>   
     <mat-toolbar class="toolbar">
         <span class="logo" routerLink="/">MAVEKO</span> 
         <app-search></app-search>        
@@ -7,4 +7,17 @@
         </span>      
       </mat-toolbar>
     </p>
-  
+   -->
+   
+   <nav class="navbar" style="background-color: #05184C; color: white;">
+    <div class="container-fluid">
+      <a class="navbar-brand brand-name">MAVEKO</a>
+      <form class="d-flex" role="search">
+        <app-search></app-search>
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button mat-icon-button>
+        <mat-icon [matBadge]="orderCount" matBadgeColor="warn">add_shopping_cart</mat-icon>
+      </button>
+    </div>
+  </nav>

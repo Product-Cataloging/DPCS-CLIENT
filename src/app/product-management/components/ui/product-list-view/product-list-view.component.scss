@@ -1,4 +1,15 @@
+.card{
+    box-shadow: 1px 1px 5px #05184C;
+}
 .card-title{
     font-size: large;
     font-weight: 400;
+    
+}
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #05184C;
+    border-top: 1px solid #05184C;
 }
