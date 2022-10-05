@@ -7,6 +7,8 @@ import { ProductListComponent } from './components/container/product-list/produc
 import { ProductListViewComponent } from './components/ui/product-list-view/product-list-view.component';
 import { ProductDetailsViewComponent } from './components/ui/product-details-view/product-details-view.component';
 import { ProductDetailsComponent } from './components/container/product-details/product-details.component';
+import { CartListViewComponent } from './components/ui/cart-list-view/cart-list-view.component';
+import { CartListComponent } from './components/container/cart-list/cart-list.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ProductDetailsComponent } from './components/container/product-details/
     ProductListComponent,
     ProductListViewComponent,
     ProductDetailsViewComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartListViewComponent,
+    CartListComponent
   ],
   imports: [
     CommonModule,
