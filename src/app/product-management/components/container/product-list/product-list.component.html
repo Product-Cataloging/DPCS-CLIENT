@@ -1,7 +1,9 @@
-<div class="container">
+
+<div class="container-flex mx-0">
   <app-product-list-view
     *ngFor="let product of products$ | async"
     [cardTitle]="product.name"
     [cardImage]="product.tag"
   ></app-product-list-view>
+  
 </div>
