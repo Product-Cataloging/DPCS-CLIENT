@@ -27,7 +27,19 @@ export class ProductService {
        })
     )
   }
-
+  search(payload:any) {
+    const url =`${environment.apiUrl}/search`;
+    return this.http.post(url,payload).pipe(
+      tap({next: (response: any) => {
+        if (response.success) { 
+          this.productStore.set(response.data);
+        } else {
+          console.log(response.error)
+       }
+      }, error: (err) => console.log(err)
+       })
+    )
+  }
   add(product: Product) {
     this.productStore.add(product);
   }

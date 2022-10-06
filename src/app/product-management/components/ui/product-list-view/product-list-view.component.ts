@@ -9,6 +9,7 @@ export class ProductListViewComponent implements OnInit {
 
   @Input() cardTitle: string = '';
   @Input() cardImage: string = '';
+  @Input() cardId:any='';
   constructor() { }
 
   ngOnInit(): void {

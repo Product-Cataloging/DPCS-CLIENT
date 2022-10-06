@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ProductService } from 'src/app/product-management/state/product/product.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() orderCount: number = 0;
   @Output() menuClick = new EventEmitter<any>;
-  value:string = '';  
+  searchValue:string = '';  
   constructor() { }
 
   ngOnInit(): void {
@@ -17,4 +18,5 @@ export class HeaderComponent implements OnInit {
   onMenuClick(){
     this.menuClick.emit();
   }
+
 }

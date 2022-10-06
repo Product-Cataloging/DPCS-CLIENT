@@ -13,6 +13,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {InputTextModule} from 'primeng/inputtext';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {SlideMenuModule} from 'primeng/slidemenu';
 @NgModule({
     exports: [
         SidebarModule,
@@ -28,7 +29,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
         ConfirmDialogModule,
         InputTextModule,
         OverlayPanelModule,
-        AutoCompleteModule
+        AutoCompleteModule,
+        SlideMenuModule,
     ]
 })
 export class NgPrimeModule { }

@@ -4,6 +4,7 @@
     *ngFor="let product of products$ | async"
     [cardTitle]="product.name"
     [cardImage]="product.tag"
+    [cardId]="'/product_items/'+product.id"
   ></app-product-list-view>
   
 </div>

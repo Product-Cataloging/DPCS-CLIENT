@@ -14,12 +14,11 @@
       <button mat-icon-button (click)="onMenuClick()"> <mat-icon>
         menu
       </mat-icon></button>
-      <a class="navbar-brand brand-name flex-grow-1">MAVEKO</a>
+      <a class="navbar-brand brand-name flex-grow-1" routerLink="/">MAVEKO</a>
       <form class="d-flex" role="search">
         <app-search></app-search>
-        <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
-      <button mat-icon-button class="mx-2">
+      <button mat-icon-button class="mx-2" routerLink="/cart">
         <mat-icon [matBadge]="orderCount" matBadgeColor="warn">add_shopping_cart</mat-icon>
       </button>
     </div>
