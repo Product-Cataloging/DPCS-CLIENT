@@ -11,12 +11,12 @@
    
    <nav class="navbar" style="background-color: #05184C; color: white;">
     <div class="container-fluid">
-      <a class="navbar-brand brand-name">MAVEKO</a>
+      <a class="navbar-brand brand-name flex-grow-1">MAVEKO</a>
       <form class="d-flex" role="search">
         <app-search></app-search>
         <button class="btn btn-outline-light" type="submit">Search</button>
       </form>
-      <button mat-icon-button>
+      <button mat-icon-button class="mx-2">
         <mat-icon [matBadge]="orderCount" matBadgeColor="warn">add_shopping_cart</mat-icon>
       </button>
     </div>
