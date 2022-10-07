@@ -1,0 +1,18 @@
+<app-header
+(menuClick)="drawer.toggle()"></app-header>
+<!-- <mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened class="side-nav">
+    <app-menu></app-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+  
+  </mat-drawer-content>
+</mat-drawer-container> -->
+
+<mat-drawer-container class="example-container" [hasBackdrop]="false">
+  <mat-drawer #drawer [mode]="'side'"><app-menu></app-menu></mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+
+  </mat-drawer-content>
+</mat-drawer-container>

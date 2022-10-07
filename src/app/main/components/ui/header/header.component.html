@@ -1,0 +1,25 @@
+<!-- <p>   
+    <mat-toolbar class="toolbar">
+        <span class="logo" routerLink="/">MAVEKO</span> 
+        <app-search></app-search>        
+        <mat-icon [matBadge]="orderCount" matBadgeColor="warn">add_shopping_cart</mat-icon>
+        <span class="cdk-visually-hidden">
+        </span>      
+      </mat-toolbar>
+    </p>
+   -->
+   
+   <nav class="navbar" style="background-color: #05184C; color: white;">
+    <div class="container-fluid">
+      <button mat-icon-button (click)="onMenuClick()"> <mat-icon>
+        menu
+      </mat-icon></button>
+      <a class="navbar-brand brand-name flex-grow-1" routerLink="/">MAVEKO</a>
+      <form class="d-flex" role="search">
+        <app-search></app-search>
+      </form>
+      <button mat-icon-button class="mx-2" routerLink="/cart">
+        <mat-icon [matBadge]="orderCount" matBadgeColor="warn">add_shopping_cart</mat-icon>
+      </button>
+    </div>
+  </nav>
