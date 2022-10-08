@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { Observable } from 'rxjs';
+import { Menu } from 'src/app/main/models/menu.model';
+import { MenuQuery } from 'src/app/main/state/menu/menu.query';
+import { MenuService } from 'src/app/main/state/menu/menu.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,108 +11,14 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  items: MenuItem[] = [];
-  constructor() {}
+  
+  @Input() items: MenuItem[] | null= [];
+  
+  constructor() {
+               
+  }
 
   ngOnInit(): void {
-    this.items = [
-      {
-        label: 'DrinkWare',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-                                    {
-        label: 'Pitchers',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Bar Accessories',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Table Top Accessories',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'PC Dessert Cup',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Food Display Ware',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Food Service Tray and Cover',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'KitchenWare',
-        items: [
-          {
-            label: 'Sub-Menu',
-            icon: 'pi pi-fw pi-plus',
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },      
- 
-    ];
+
   }
 }

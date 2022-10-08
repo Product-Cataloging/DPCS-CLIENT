@@ -10,7 +10,8 @@
 </mat-drawer-container> -->
 
 <mat-drawer-container class="example-container" [hasBackdrop]="false">
-  <mat-drawer #drawer [mode]="'side'"><app-menu></app-menu></mat-drawer>
+  <mat-drawer #drawer [mode]="'side'"><app-menu
+    [items]="menus$ |async"></app-menu></mat-drawer>
   <mat-drawer-content>
     <router-outlet></router-outlet>
 
