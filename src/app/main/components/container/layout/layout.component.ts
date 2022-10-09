@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
+import { Observable } from 'rxjs';
+import { MenuQuery } from 'src/app/main/state/menu/menu.query';
+import { MenuService } from 'src/app/main/state/menu/menu.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  menus$:Observable<MenuItem[]> = this.query.selectMenuItems();
+  constructor(private query:MenuQuery,
+    private service:MenuService) { 
+    this.service.get().subscribe();
+  }
 
   ngOnInit(): void {
   }
