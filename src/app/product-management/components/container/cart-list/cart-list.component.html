@@ -1,24 +1,19 @@
 <div class="container">
-    <div class="d-flex justify-content-between">
-      <div class="list-group">
-        <p class="mb-0 h3">Shopping Cart</p>
-      </div>
-      <button class="btn btn-outline-success" (click)="onSendRequestClick()">
-        Send Request for A Quote
-      </button>
+  <div class="d-flex justify-content-between">
+    <div class="list-group">
+      <p class="mb-0 h3">Shopping Cart</p>
     </div>
-    <hr />
-<app-cart-list-view
-[listTitle]="listTitle"
-(cancelClick)="onCancelClick()"
-(sendRequestClick)="onSendRequestClick()"
-></app-cart-list-view>
-<app-cart-list-view
-[listTitle]="listTitle"
-(cancelClick)="onCancelClick()"
-(sendRequestClick)="onSendRequestClick()"
-></app-cart-list-view><app-cart-list-view
-[listTitle]="listTitle"
-(cancelClick)="onCancelClick()"
-(sendRequestClick)="onSendRequestClick()"
-></app-cart-list-view>
+    <button class="btn btn-outline-success" (click)="onSendRequestClick()">
+      Send Request for A Quote
+    </button>
+  </div>
+  <hr />
+  <app-cart-list-view *ngFor="let cart of carts|async"
+    [listTitle]="cart.name"
+    [listImage]="cart.image_url"
+    [listPrice]="cart.price"
+    [listDimensions]="cart.dimensions"
+    (cancelClick)="onCancelClick(cart.id)"
+    (sendRequestClick)="onSendRequestClick()"
+  ></app-cart-list-view>
+</div>

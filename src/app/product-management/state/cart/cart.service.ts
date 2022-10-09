@@ -10,7 +10,7 @@ export class CartService {
 
   constructor(private cartStore: CartStore, private http: HttpClient) {
   }
-
+  globalCart:Cart[] = [];
   get() {
     const url =`${environment.apiUrl}/cart`;
     return this.http.get(url).pipe(
@@ -53,4 +53,14 @@ export class CartService {
     )
   }
 
+  addItem(payload:any){
+
+    this.globalCart.push(payload);        
+    this.cartStore.set(this.globalCart);
+  }
+  removeItem(id:number){       
+    let rData = this.globalCart.findIndex((data)=> data.id === id );
+    this.globalCart.splice(rData,1);
+    this.cartStore.set(this.globalCart);
+  }
 }

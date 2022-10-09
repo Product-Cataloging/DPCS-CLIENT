@@ -1,5 +1,9 @@
 export interface Cart {
-  id: number | string;
+  id:number;
+  name:string;
+  image_url:string;
+  price:number;
+  dimensions:string;
 }
 
 export function createCart(params: Partial<Cart>) {
