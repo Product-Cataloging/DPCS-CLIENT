@@ -1,42 +1,49 @@
 <div class="container">
-  <div class="d-flex mb-4">
-    <div class="card m-1" style="width: 50%;">
-      <img [src]="boardImage" class="card-img-top" alt="...">
+  <div class="d-flex my-4">
+    <div class="card me-5" style="width: 50%;" *ngFor="let board of boards">
+      <img [src]="board.image_url" class="card-img-top" alt="..."width="648px" height="648px">
       <div class="card-body">
-        <h5 class="card-title">{{boardTitle}}</h5>
+        <h5 class="card-title">{{board.name}}</h5>
         <!-- <p class="card-text">{{boardDescription}}</p> -->
       </div>
     </div>  
-    <div class="about p-5" style="width: 40%;">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, rem excepturi possimus rerum distinctio nisi voluptates 
-      est reiciendis inventore ipsam assumenda quaerat doloribu
-      s? Fugiat ratione est porro quia, aut iure!
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem deserunt corporis quam minus, eius vel aspernatur culpa! Accusantium 
-      delectus, facere, minima tempora, odio 
-      quae ipsum molestias vitae aspernatur labore quidem?
+    <div class="about " style="width: 50%;">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, rem excepturi possimus rerum distinctio nisi voluptates 
+        est reiciendis inventore ipsam assumenda quaerat doloribu
+        s? Fugiat ratione est porro quia, aut iure!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem deserunt corporis quam minus, eius vel aspernatur culpa! Accusantium 
+        delectus, facere, minima tempora, odio 
+        quae ipsum molestias vitae aspernatur labore quidem?  
+      </p>
+      <table class="table table-responsive table-bordered h6">
+        <thead style="background-color: #05184C; color: white;">
+          <tr>
+            <td>Dimensions</td>
+            <td>Color</td>
+            <td>Capacity</td>
+            <td>Material</td>
+            <td>Price</td> 
+            <td>Action</td> 
+          </tr>
+      
+        </thead>
+        <tbody>
+            <tr *ngFor="let product_item of product_items">
+              <td class="action-btn ">{{product_item.dimension}}</td>
+              <td class="action-btn ">{{product_item.color}}</td>
+              <td class="action-btn ">{{product_item.capacity}}</td> 
+              <td class="action-btn ">{{product_item.material}}</td>
+              <td class="action-btn ">{{product_item.price}}</td>
+              <td class="action-btn "><button class="btn btn-outline-dark btn-sm">Add to Cart</button></td>   
+            </tr>
+        </tbody>
+      </table>  
+
     </div>
 
 
   </div>
-  <table class="table table-responsive table-bordered h6">
-    <thead style="background-color: #05184C; color: white;">
-      <tr>
-        <td>Item No</td>
-        <td>Size</td>
-        <td>Price</td> 
-        <td>Action</td> 
-      </tr>
-
-    </thead>
-    <tbody>
-        <tr>
-          <td class="action-btn ">120304</td>
-          <td class="action-btn ">2cm*6cm*5cm</td>
-          <td class="action-btn ">$2.00</td> 
-          <td class="action-btn "><button class="btn btn-outline-dark btn-sm">Add to Cart</button></td>   
-        </tr>
-    </tbody>
-  </table>  
+  
  
 </div>
-  
