@@ -22,7 +22,7 @@ export class MenuQuery extends QueryEntity<MenuState> {
           menu.children.forEach((child: {'id':string,'name':string }) => {
             children.push({
               label: child.name,
-              routerLink: '/categories'+child.id,
+              routerLink: '/category/products/'+child.id,
               routerLinkActiveOptions: { exact: true}
             });
           });
