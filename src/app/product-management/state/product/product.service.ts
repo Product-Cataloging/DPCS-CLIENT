@@ -48,6 +48,13 @@ export class ProductService {
       tap({next: (response: any) => {
         if (response.success) {
           this.productStore.set(response.data);
+        } else {
+          console.log(response.error)
+       }
+      }, error: (err) => console.log(err)
+       })
+    )
+  }
 
  show(id:number){
   const url =`${environment.apiUrl}/products/${id}`;
@@ -62,7 +69,7 @@ export class ProductService {
        })
     )
   }
-}
+
   add(product: Product) {
     this.productStore.add(product);
   }
