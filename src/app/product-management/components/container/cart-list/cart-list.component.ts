@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Cart } from 'src/app/product-management/models/cart.model';
+import { CartQuery } from 'src/app/product-management/state/cart/cart.query';
+import { CartService } from 'src/app/product-management/state/cart/cart.service';
 
 @Component({
   selector: 'app-cart-list',
@@ -7,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartListComponent implements OnInit {
   listTitle = 'Hello';
-  constructor() {}
+  carts:Observable<Cart[]> = this.query.selectAll();
+  
+  constructor(private query:CartQuery,
+              private service:CartService) {}
 
   ngOnInit(): void {}
-  onCancelClick() {
+  onCancelClick(id:number) {
+    this.service.removeItem(id);
   }
   onSendRequestClick() {
   }

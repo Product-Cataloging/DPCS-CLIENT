@@ -1,5 +1,6 @@
 <span class="p-input-icon-left">
-    <p-autoComplete class="me-2" [(ngModel)]="searchValue" [suggestions]="results" (completeMethod)="search($event)" placeholder="Search Here..."></p-autoComplete>
+    <p-autoComplete class="me-2" [(ngModel)]="searchValue" [suggestions]="results" (completeMethod)="search($event)" placeholder="Search Here..."
+    (keyup.enter)="searchValueChange()"></p-autoComplete>
     <!-- <button mat-icon-button  (click)="op.toggle($event)" aria-label="Example icon button with a menu icon">
         <mat-icon>filter_list</mat-icon>
     </button> -->
