@@ -41,12 +41,20 @@ export class ProductService {
     )
   }
 
+
   getProducts(id:any) {
     const url =`${environment.apiUrl}/category/products/${id}`;    
     return this.http.get(url).pipe(
       tap({next: (response: any) => {
         if (response.success) {
           this.productStore.set(response.data);
+
+ show(id:number){
+  const url =`${environment.apiUrl}/products/${id}`;
+    return this.http.get(url).pipe(
+      tap({next: (response: any) => {
+        if (response.success) {
+          this.productStore.set([response.data]);
         } else {
           console.log(response.error)
        }
@@ -54,6 +62,7 @@ export class ProductService {
        })
     )
   }
+}
   add(product: Product) {
     this.productStore.add(product);
   }

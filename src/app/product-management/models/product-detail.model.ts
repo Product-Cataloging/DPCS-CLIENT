@@ -1,8 +1,9 @@
 export interface ProductDetail {
   id: number;
-  name: string;
-  description:string;
-  image:string;
-  tag:string;
+  color:string;
+  dimension:string;
+  price:string;
+  material:string;
+  capacity:string;
 }
 

@@ -3,7 +3,7 @@
   <app-product-list-view
     *ngFor="let product of products$ | async"
     [cardTitle]="product.name"
-    [cardImage]="product.tag"
+    [cardImage]="product.image_url"
     [cardId]="'/product_items/'+product.id"
   ></app-product-list-view>
   
