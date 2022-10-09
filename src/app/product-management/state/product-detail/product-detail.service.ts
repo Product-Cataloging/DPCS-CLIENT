@@ -14,7 +14,7 @@ export class ProductDetailService {
 
 
   get(id:number) {
-    const url =`${environment.apiUrl}/products/${id}`;
+    const url =`${environment.apiUrl}/products/items/${id}`;
    return this.http.get(url).pipe(
      tap({next: (response: any) => {
        if (response.success) {
