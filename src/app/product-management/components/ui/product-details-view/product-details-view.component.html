@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="d-flex my-4">
-    <div class="card me-5" style="width: 50%;" *ngFor="let board of boards">
+  <div class="d-flex my-4"*ngFor="let board of boards">
+    <div class="card me-5" style="width: 50%;" >
       <img [src]="board.image_url" class="card-img-top" alt="..."width="648px" height="648px">
       <div class="card-body">
         <h5 class="card-title">{{board.name}}</h5>
@@ -35,7 +35,8 @@
               <td class="action-btn ">{{product_item.capacity}}</td> 
               <td class="action-btn ">{{product_item.material}}</td>
               <td class="action-btn ">{{product_item.price}}</td>
-              <td class="action-btn "><button class="btn btn-outline-dark btn-sm">Add to Cart</button></td>   
+              <td class="action-btn "><button class="btn btn-outline-dark btn-sm" (click)="onAddToCartClick(product_item.id,board.name,board.image_url,
+                product_item.dimension,product_item.price)">Add to Cart</button></td>   
             </tr>
         </tbody>
       </table>  
@@ -44,6 +45,5 @@
 
 
   </div>
-  
  
 </div>

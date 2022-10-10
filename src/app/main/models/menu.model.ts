@@ -1,3 +1,9 @@
 export interface Menu {
-  id: number | string;
+id:string;
+name:string;
+children:[{
+  id:string;
+  name:string;
+
 }
+]}

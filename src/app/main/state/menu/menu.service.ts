@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ID } from '@datorama/akita';
 import { tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Menu } from '../../models/menu.model';
 import { MenuStore } from './menu.store';
 
@@ -13,21 +14,20 @@ export class MenuService {
 
 
   get() {
-    return this.http.get<Menu[]>('https://api.com').pipe(tap(entities => {
-      this.menuStore.set(entities);
-    }));
+    const url =`${environment.apiUrl}/category`;
+    return this.http.get(url).pipe(
+      tap({next: (response: any) => {
+        if (response.success) {
+          console.log(response.data);
+          
+          this.menuStore.set(response.data);
+        } else {
+          console.log(response.error)
+       }
+      }, error: (err) => console.log(err)
+       })
+    )
   }
 
-  add(menu: Menu) {
-    this.menuStore.add(menu);
-  }
-
-  update(id:any, menu: Partial<Menu>) {
-    this.menuStore.update(id, menu);
-  }
-
-  remove(id: ID) {
-    this.menuStore.remove(id);
-  }
-
+  
 }

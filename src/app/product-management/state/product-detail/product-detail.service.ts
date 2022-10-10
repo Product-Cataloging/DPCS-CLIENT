@@ -14,11 +14,11 @@ export class ProductDetailService {
 
 
   get(id:number) {
-    const url =`${environment.apiUrl}/products/items/${id}`;
+    const url =`${environment.apiUrl}/product/items/${id}`;
    return this.http.get(url).pipe(
      tap({next: (response: any) => {
-       if (response.success) {
-         this.productDetailStore.set([response.data]);
+       if (response.success) {        
+        this.productDetailStore.set(response.data);
        } else {
         console.log(response.error);
       }
