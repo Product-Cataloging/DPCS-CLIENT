@@ -10,16 +10,34 @@ import { CartService } from 'src/app/product-management/state/cart/cart.service'
   styleUrls: ['./cart-list.component.scss'],
 })
 export class CartListComponent implements OnInit {
-  listTitle = 'Hello';
+   sum:number = 0;
   carts:Observable<Cart[]> = this.query.selectAll();
   
   constructor(private query:CartQuery,
-              private service:CartService) {}
+              private service:CartService) {
+                this.carts.subscribe(
+                  (data)=>{
+                    let temp = 0;
+                    data.forEach((obj)=>{
+                      temp  = temp + obj.price
+                    })
+                    this.sum = temp;
+                  }
+                  
+                  
+                )
+              }
 
   ngOnInit(): void {}
   onCancelClick(id:number) {
     this.service.removeItem(id);
   }
   onSendRequestClick() {
+  }
+  totalPrice(){
+    this.carts.subscribe(
+      (data)=>console.log(data)
+      
+    )
   }
 }
