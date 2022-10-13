@@ -14,6 +14,8 @@ import {InputTextModule} from 'primeng/inputtext';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {SlideMenuModule} from 'primeng/slidemenu';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {BlockUIModule} from 'primeng/blockui';
 @NgModule({
     exports: [
         SidebarModule,
@@ -31,6 +33,8 @@ import {SlideMenuModule} from 'primeng/slidemenu';
         OverlayPanelModule,
         AutoCompleteModule,
         SlideMenuModule,
+        ProgressSpinnerModule,
+        BlockUIModule
     ]
 })
 export class NgPrimeModule { }

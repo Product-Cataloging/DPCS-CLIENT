@@ -12,7 +12,6 @@ export class CartListViewComponent implements OnInit {
   @Input() listDimensions:string = "";
   @Input() listImage:string = "";
   @Output() cancelClick = new EventEmitter<any>;
-  @Output() sendRequestClick = new EventEmitter<any>;
 
   constructor() { }
 
@@ -21,7 +20,5 @@ export class CartListViewComponent implements OnInit {
   onCancelClick(event:Event){
    this.cancelClick.emit();
   }
-  onSendRequestClick(){
-    this.sendRequestClick.emit();
-   }
+
 }

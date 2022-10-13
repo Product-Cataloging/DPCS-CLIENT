@@ -17,9 +17,7 @@ export class MenuService {
     const url =`${environment.apiUrl}/category`;
     return this.http.get(url).pipe(
       tap({next: (response: any) => {
-        if (response.success) {
-          console.log(response.data);
-          
+        if (response.success) {      
           this.menuStore.set(response.data);
         } else {
           console.log(response.error)

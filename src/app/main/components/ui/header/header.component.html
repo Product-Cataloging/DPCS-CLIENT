@@ -9,7 +9,7 @@
     </p>
    -->
    
-   <nav class="navbar" style="background-color: #05184C; color: white;">
+   <nav class="navbar" style="background-color: #000; color: white;">
     <div class="container-fluid">
       <button mat-icon-button (click)="onMenuClick()"> <mat-icon>
         menu
@@ -18,8 +18,12 @@
       <form class="d-flex" role="search">
         <app-search></app-search>
       </form>
+      <button class="btn btn-outline-warning ms-3" routerLink="/quote">
+        Request Quote
+    </button>
       <button mat-icon-button class="mx-2" routerLink="/cart">
         <mat-icon [matBadge]="orderCount" matBadgeColor="warn">add_shopping_cart</mat-icon>
       </button>
+     
     </div>
   </nav>
