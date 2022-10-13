@@ -1,0 +1,121 @@
+<div class="container">
+  <div class="alert alert-success" [hidden]='toast' role="alert">
+   Successfully Sent!
+  </div>
+  <div class="row align-items-center">
+    <div class="col">
+      <p class="h3">Request for a Quote</p>
+      <hr />
+      <form [formGroup]="form">
+        <div class="mb-3">
+          <label for="firstName" class="form-label"
+            >First Name:</label
+          >
+          <input
+            formControlName = 'firstName'
+            type="text"
+            class="form-control"
+            id="firstName"
+  
+            />
+            <small *ngIf="form.get('firstName')?.touched && form.get('firstName')?.invalid"
+            style="color:red ;">First Name is Required.</small>
+        </div>
+        <div class="mb-3">
+          <label for="lastName" class="form-label"
+            >Last Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            formControlName = 'lastName'
+            />
+            <small *ngIf="form.get('lastName')?.touched && form.get('lastName')?.invalid"
+            style="color:red ;">Last Name is Required.</small>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label"
+            >Email</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            formControlName = 'email'
+
+            />
+            <div *ngIf="email?.touched && email?.invalid"
+            >
+                <small style="color:red ;"> Email is Required.</small>
+                             
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="phoneNumber" class="form-label"
+            >Phone Number</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="phoneNumber"
+            formControlName = 'phoneNumber'
+            />
+            <small *ngIf="form.get('phoneNumber')?.touched && form.get('phoneNumber')?.invalid"
+            style="color:red ;">Phone Number is Required.</small>
+        </div>
+        <div class="mb-3">
+          <label for="productName" class="form-label"
+            >Product Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="productName"
+            formControlName = 'productName'
+            />
+            <small *ngIf="form.get('productName')?.touched && form.get('productName')?.invalid"
+            style="color:red ;">Product Name is Required.</small>
+        </div>
+        
+        <div class="mb-3">
+          <label for="basic-url" class="form-label">Image Link</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3"
+              >Url</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="basic-url"
+              aria-describedby="basic-addon3"
+              formControlName = 'imageUrl'
+
+            />
+          </div>
+          <small *ngIf="form.get('imageUrl')?.touched && form.get('imageUrl')?.invalid"
+          style="color:red ;">Image Url is Required.</small>
+
+        </div>
+        <div class="mb-3">
+          <label for="productDescription" class="form-label"
+            >Product Description</label
+          >
+          <textarea
+            class="form-control"
+            id="productDescription"
+            rows="3"
+            formControlName = 'productDescription'
+
+          ></textarea>
+          <small *ngIf="form.get('productDescription')?.touched && form.get('productDescription')?.invalid"
+            style="color:red ;">Product Description is Required.</small>
+        </div>
+        <button  (click)="onRequestQuoteClick()" class="btn btn-warning"
+        [disabled]="!form.valid">Request a Quote</button>
+  
+      </form>
+      
+    </div>
+  </div>
+</div>

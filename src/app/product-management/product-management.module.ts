@@ -9,6 +9,8 @@ import { ProductDetailsViewComponent } from './components/ui/product-details-vie
 import { ProductDetailsComponent } from './components/container/product-details/product-details.component';
 import { CartListViewComponent } from './components/ui/cart-list-view/cart-list-view.component';
 import { CartListComponent } from './components/container/cart-list/cart-list.component';
+import { QuoteFormComponent } from './components/ui/quote-form/quote-form.component';
+import { QuoteComponent } from './components/container/quote/quote.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { CartListComponent } from './components/container/cart-list/cart-list.co
     ProductDetailsViewComponent,
     ProductDetailsComponent,
     CartListViewComponent,
-    CartListComponent
+    CartListComponent,
+    QuoteFormComponent,
+    QuoteComponent
   ],
   imports: [
     CommonModule,
