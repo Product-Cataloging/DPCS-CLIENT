@@ -1,10 +1,12 @@
 <span class="p-input-icon-left">
-    <p-autoComplete class="me-2" [(ngModel)]="searchValue" [suggestions]="results" (completeMethod)="search($event)" placeholder="Search Here..."
+    <p-autoComplete  [(ngModel)]="searchValue" (completeMethod)="search($event)" placeholder="Search Here..."
     (keyup.enter)="searchValueChange()"></p-autoComplete>
     <!-- <button mat-icon-button  (click)="op.toggle($event)" aria-label="Example icon button with a menu icon">
         <mat-icon>filter_list</mat-icon>
     </button> -->
-    <button class="btn btn-outline-light mb-1" type="submit"  (click)="searchValueChange()">Search</button>
+    <button  mat-icon-button  (click)="searchValueChange()">
+        <mat-icon>search</mat-icon>
+    </button>
 </span>
 
 <p-overlayPanel #op>
