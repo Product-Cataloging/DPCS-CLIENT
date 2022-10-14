@@ -16,6 +16,7 @@ export class QuoteFormComponent implements OnInit {
     phoneNumber: new FormControl('',[Validators.required]),
     productName: new FormControl('',Validators.required),
     productDescription: new FormControl('',Validators.required),
+    quantity:new FormControl('',Validators.required),
     imageUrl: new FormControl('',Validators.required),
   });
   ngOnInit(): void {}

@@ -20,7 +20,9 @@ export class QuoteComponent implements OnInit {
     description:event.productDescription,
     image_url:event.imageUrl,
     phone_number:event.phoneNumber,
-    product_name:event.productName}}).subscribe();
+    product_name:event.productName,
+    quantity:event.quantity,
+    status:'Requested'}}).subscribe();
     
     
   }
