@@ -5,5 +5,6 @@ export interface ProductDetail {
   price:string;
   material:string;
   capacity:string;
+  packaging_unit:string;
 }
 
