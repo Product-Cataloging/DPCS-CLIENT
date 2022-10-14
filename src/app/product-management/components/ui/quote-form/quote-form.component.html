@@ -77,6 +77,19 @@
             <small *ngIf="form.get('productName')?.touched && form.get('productName')?.invalid"
             style="color:red ;">Product Name is Required.</small>
         </div>
+        <div class="mb-3">
+          <label for="quantity" class="form-label"
+            >Quantity</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="quantity"
+            formControlName = 'quantity'
+            />
+            <small *ngIf="form.get('quantity')?.touched && form.get('quantity')?.invalid"
+            style="color:red ;">Quantity is Required.</small>
+        </div>
         
         <div class="mb-3">
           <label for="basic-url" class="form-label">Image Link</label>
